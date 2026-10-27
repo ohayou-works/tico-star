@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ティコの星 プライバシーポリシー</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: one calm reading column under a small night-sky band; language tabs switch the whole policy. */
+:root{
+  --bg:#f6f7fb; --surface:#ffffff; --fg:#1c2236; --muted:#5b6380; --line:#dde1ee;
+  --sky:#1a2347; --sky-fg:#eef1ff; --star:#f2c14e; --accent:#3a4fb0; --note:#fff6dc; --note-fg:#5a4410;
+  --display:"Zen Maru Gothic","Hiragino Maru Gothic ProN",system-ui,sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
+  --zh:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --tw:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1426; --surface:#161c33; --fg:#e7eaf6; --muted:#a2a9c6; --line:#2a3255;
+  --sky:#0a0e1d; --sky-fg:#eef1ff; --star:#f5cd6a; --accent:#93a6ff; --note:#2e2914; --note-fg:#f3dd9c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1426; --surface:#161c33; --fg:#e7eaf6; --muted:#a2a9c6; --line:#2a3255;
+  --sky:#0a0e1d; --sky-fg:#eef1ff; --star:#f5cd6a; --accent:#93a6ff; --note:#2e2914; --note-fg:#f3dd9c; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.85}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:var(--sky);color:var(--sky-fg);position:relative;overflow:hidden}
+header .wrap{padding-block:40px 28px;position:relative}
+header canvas{position:absolute;inset:0;width:100%;height:100%}
+.app{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.08em;display:flex;align-items:center;gap:8px;opacity:.9}
+.app svg{width:16px;height:16px;fill:var(--star)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1.3;margin:10px 0 6px;text-wrap:balance}
+.date{font-size:13px;opacity:.75;font-variant-numeric:tabular-nums}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-top:22px}
+nav a{color:var(--sky-fg);text-decoration:none;font-size:14px;padding:6px 14px;border:1px solid rgba(238,241,255,.35);border-radius:999px}
+nav a[aria-current="true"]{background:var(--sky-fg);color:var(--sky);border-color:var(--sky-fg);font-weight:700}
+nav a:focus-visible{outline:2px solid var(--star);outline-offset:2px}
+main .wrap{padding-block:28px 56px}
+.summary{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:32px}
+.summary h2{margin-top:0}
+.summary ul{margin:0;padding-left:1.2em;display:grid;gap:4px}
+h2{font-family:var(--display);font-size:20px;line-height:1.45;margin:36px 0 8px;text-wrap:balance}
+h2 .n{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:.4em}
+p,li{max-width:65ch}
+ul{padding-left:1.2em}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:460px}
+.tbl{overflow-x:auto;margin:8px 0}
+th,td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+.kids{background:var(--note);color:var(--note-fg);border-radius:12px;padding:18px 22px;margin-top:12px}
+.kids h2{margin-top:0;color:inherit}
+.kids h2 .n{color:inherit}
+.kids ul{display:grid;gap:4px;margin:0 0 8px}
+.contact{font-family:ui-monospace,Menlo,monospace;background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:8px 12px;display:inline-block;user-select:all}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
+[lang="zh-Hans"]{font-family:var(--zh)}
+[lang="zh-Hant"]{font-family:var(--tw)}
+@media (prefers-reduced-motion: reduce){header canvas{display:none}}
+</style>
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<header>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.6 7.2 7.4.3-5.8 4.6 2 7.3L12 16.7 5.8 20.9l2-7.3L2 9l7.4-.3z"/></svg><span id="appname">ティコの星</span></div>
+    <h1 id="h1">プライバシーポリシー</h1>
+    <div class="date" id="date">制定日:2026年10月27日</div>
+    <nav aria-label="Language">
+      <a href="#ja" data-l="ja">日本語</a>
+      <a href="#en" data-l="en">English</a>
+      <a href="#zh" data-l="zh">简体中文</a>
+      <a href="#tw" data-l="tw">繁體中文</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===================== 日本語 ===================== -->
+<section class="wrap" id="sec-ja" lang="ja">
+  <div class="summary">
+    <h2>かんたんな要約</h2>
+    <ul>
+      <li>このアプリは、インターネットにもサーバーにも接続しません。</li>
+      <li>アカウント登録はありません。アプリから開発者へ情報が送られることはありません。</li>
+      <li>メッセージは部屋ごとの鍵で暗号化され、Bluetoothで近くの端末へ届きます。保存先はあなたのiPhone(またはiPad)の中だけです。</li>
+      <li>広告、利用状況の分析、トラッキングは一切ありません。</li>
+    </ul>
+  </div>
+
+  <p>「ティコの星」(以下「本アプリ」)は、電波やWi-Fiが届かない場所で、近くにいる仲間とテキストでやりとりするためのアプリです。本ポリシーでは、本アプリがどのような情報を扱い、どのように守っているかを説明します。</p>
+
+  <h2><span class="n">1</span>集める情報</h2>
+  <p>開発者は、利用者の個人情報を一切収集しません。本アプリにはアカウントも、開発者が運営するサーバーもありません。本アプリから利用者の情報が開発者に送られることはありません(Appleを通じて届く情報は5章をご覧ください)。</p>
+
+  <h2><span class="n">2</span>端末の中で扱う情報</h2>
+  <p>本アプリの機能のために、次の情報をあなたの端末の中で扱います。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>情報</th><th>使い道</th><th>保存場所・共有先</th></tr></thead>
+    <tbody>
+      <tr><td>メッセージ</td><td>チャットの表示、届かなかった分の再送</td><td>あなたの端末(各部屋の最新1000件)</td></tr>
+      <tr><td>ニックネーム(16文字まで。実名でなくて構いません)</td><td>誰の発言かを示すため。「いま部屋にいる人」の一覧に表示するため</td><td>あなたの端末。暗号化して、同じ部屋のメンバーにだけ送ります</td></tr>
+      <tr><td>部屋の名前と部屋の鍵(QRコードで受け取るもの)</td><td>同じ部屋のメンバーだけで会話するため</td><td>あなたの端末(部屋の鍵はiPhoneのキーチェーンに保管)</td></tr>
+      <tr><td>端末の識別番号(初回起動時にアプリが作るランダムな値)</td><td>吹き出しの色分けと、接続人数を数えるため。あなた本人とは結びつかず、アプリを入れ直すと変わります</td><td>あなたの端末。暗号化して、同じ部屋のメンバーにだけ送ります</td></tr>
+      <tr><td>つながりの情報(どの端末どうしがつながっているか。各端末のニックネームを含みます)</td><td>画面の背景の図と、「いま部屋にいる人」の一覧を表示するため</td><td>暗号化して、同じ部屋のメンバーの間でだけ共有します</td></tr>
+      <tr><td>入室・退室のお知らせ(「〇〇さんが入室しました」など。〇〇はニックネーム)</td><td>部屋に入った人・出た人に、メンバーが気づけるようにするため(知らない人が入ってきたときに気づく助けになります)</td><td>暗号化して、同じ部屋のメンバーにだけ送ります。メンバーの端末の履歴に残ります</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2><span class="n">3</span>メッセージの届き方と暗号化</h2>
+  <p>メッセージは、Bluetoothを使って近くの端末へ直接送られます。メッセージは部屋ごとの鍵で暗号化されます(AES-256-GCM方式)。鍵は部屋を作るときにアプリが作り、その部屋のQRコードにだけ含まれます。通信の中に鍵が流れることはありません。途中で書き換えられたメッセージは、受け取った端末が検出して捨てます。</p>
+  <p>遠くのメンバーへ届けるため、「中継モード」がオンになっている端末が、ほかの部屋のメッセージを暗号化されたまま次の端末へ渡すことがあります。中継する端末は部屋の鍵を持っていないため、メッセージの内容を読むことはできません。ただし、通信が行われた時刻とデータの大きさ、部屋を見分けるための短い印、メッセージごとのランダムなIDは、中継する端末からも見えます。</p>
+  <p>Bluetoothの電波には、「このアプリの端末」であることを示す目印が含まれます。ニックネームや部屋の名前は含まれません。</p>
+  <p>部屋に入れるのは、その部屋のQRコードを持っている人だけです。言い換えると、QRコードを知った人は誰でも部屋に入り、メッセージを読むことができます。QRコードの写真やスクリーンショットが広まらないよう注意してください。</p>
+
+  <h2><span class="n">4</span>使用する権限</h2>
+  <ul>
+    <li><strong>Bluetooth</strong>:近くの端末とメッセージを送り合うために使います。画面を閉じているときやロック中でも受け取れるよう、バックグラウンドでの動作を使います。</li>
+    <li><strong>カメラ</strong>:部屋に入るためのQRコードを読み取るときだけ使います。写真や動画は保存も送信もしません。</li>
+    <li><strong>通知</strong>:新しいメッセージが届いたことを知らせるために、端末の中で通知を作ります。表示は「新着メッセージあり」だけで、メッセージの本文は表示されません。サーバーから届くプッシュ通知は使いません。</li>
+  </ul>
+  <p>位置情報、連絡先、写真、マイクは使いません。これらの権限は、iPhoneの「設定」アプリからいつでもオフにできます。</p>
+
+  <h2><span class="n">5</span>第三者への提供</h2>
+  <p>本アプリには、広告、アクセス解析、クラッシュレポートなど、外部の会社のサービスは組み込まれていません。開発者が利用者の情報を第三者に提供・販売することはありません。</p>
+  <p>なお、Appleのテスト配信サービス「TestFlight」でテスト版を入れた場合や、App Storeからアプリを入れた場合、利用者がiPhoneで許可していれば、Appleがクラッシュ情報や利用状況を集めることがあります。これはAppleのプライバシーポリシーに従うもので、本アプリが送っているものではありません。開発者は、Appleを通じて、個人を特定しない、クラッシュの記録や集計の情報を見ることがあります。TestFlightからフィードバックを送った場合は、その内容(送った人のメールアドレスを含むことがあります)を、開発者が受け取ります。</p>
+
+  <div class="kids">
+    <h2><span class="n">6</span>お子さまの利用について</h2>
+    <p>本アプリは、お子さまが家族や友だちと使うことも想定して作っています。保護者の方に知っておいていただきたい点は2つです。</p>
+    <ul>
+      <li>知らない人と自動でつながる仕組みではありません。会話できるのは、QRコードで入った部屋の中だけです。</li>
+      <li>QRコードを知った人は、誰でもその部屋に入れます。QRコードを誰と共有するか、お子さまと一緒に決めてください。</li>
+    </ul>
+    <p>本アプリが年齢などの情報を集めることはありません。</p>
+  </div>
+
+  <h2><span class="n">7</span>情報の削除</h2>
+  <p>部屋から退室すると、その部屋のメッセージはあなたの端末から消えます。ただし、仲間の端末に届いたメッセージ(退室のお知らせを含みます)は、仲間の端末に残ります。同じ部屋に入り直すと、仲間の端末にある最近のやりとりが届くことがあります。</p>
+  <p>本アプリを削除すると、メッセージやニックネームなど、端末内の情報は消えます。部屋の鍵はiPhoneのキーチェーン(安全な保管庫)に保管しているため、削除した時点では残りますが、アプリを入れ直したときに自動で消去されます。部屋の鍵がiCloudや別の端末に移ることはありません。開発者のもとには情報が残らないため、開発者側での削除手続きは必要ありません。</p>
+
+  <h2><span class="n">8</span>このポリシーの変更</h2>
+  <p>機能の追加などに合わせて、本ポリシーを変更することがあります。変更した場合は、このページで内容と日付を更新してお知らせします。</p>
+
+  <h2><span class="n">9</span>お問い合わせ</h2>
+  <p>本ポリシーに関するご質問は、次の連絡先までお寄せください。</p>
+  <p><span class="contact">ohayou1572@gmail.com</span></p>
+
+  <footer>ティコの星 開発者 ・ 制定日 2026年10月27日</footer>
+</section>
+
+<!-- ===================== English ===================== -->
+<section class="wrap" id="sec-en" lang="en" hidden>
+  <div class="summary">
+    <h2>In short</h2>
+    <ul>
+      <li>This app never connects to the internet or to any server.</li>
+      <li>There are no accounts. The App never sends your information to the developer.</li>
+      <li>Messages are encrypted with a key for each room and travel over Bluetooth to nearby devices. They are stored only on your iPhone (or iPad).</li>
+      <li>No ads, no analytics, no tracking.</li>
+    </ul>
+  </div>
+
+  <p>Tico Star (“the App”) lets you send text messages to people nearby when there is no cell signal or Wi-Fi. This policy explains what information the App handles and how it is protected.</p>
+
+  <h2><span class="n">1</span>Information we collect</h2>
+  <p>The developer does not collect any personal information. The App has no accounts and no developer-run server. The App never sends your information to the developer (see section 5 for information that may reach the developer through Apple).</p>
+
+  <h2><span class="n">2</span>Information handled on your device</h2>
+  <p>To work, the App handles the following information on your device.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Information</th><th>Purpose</th><th>Stored / shared with</th></tr></thead>
+    <tbody>
+      <tr><td>Messages</td><td>Showing the chat and resending messages that did not arrive</td><td>Your device (latest 1,000 per room)</td></tr>
+      <tr><td>Nickname (up to 16 characters; it does not have to be your real name)</td><td>Showing who wrote each message and listing who is in the room now</td><td>Your device. Sent encrypted, only to members of the same room</td></tr>
+      <tr><td>Room name and room key (received by QR code)</td><td>Keeping the conversation among room members only</td><td>Your device (room keys are kept in the iPhone Keychain)</td></tr>
+      <tr><td>Device ID (a random value the App creates on first launch)</td><td>Coloring chat bubbles and counting connected devices. It is not linked to you and changes if you reinstall the App</td><td>Your device. Sent encrypted, only to members of the same room</td></tr>
+      <tr><td>Connection information (which devices are connected to each other, including each device’s nickname)</td><td>Drawing the background diagram and listing who is in the room now</td><td>Shared encrypted, only among members of the same room</td></tr>
+      <tr><td>Join and leave notices (such as “Taro joined”, using the nickname)</td><td>Letting members notice who joined or left the room (this helps them notice if someone unexpected joins)</td><td>Sent encrypted, only to members of the same room. Stays in members’ chat history</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2><span class="n">3</span>How messages are delivered and encrypted</h2>
+  <p>Messages are sent directly to nearby devices using Bluetooth. Each message is encrypted with a key for its room (AES-256-GCM). The App creates the key when a room is made, and the key is contained only in that room’s QR code. The key is never sent over the air. If a message is altered on the way, the receiving device detects it and discards it.</p>
+  <p>To reach members who are farther away, a device with “Relay mode” on may pass messages from other rooms along, still encrypted. A relaying device does not have the room key, so it cannot read the content of messages. A relaying device can, however, see when data is sent and how large it is, a short marker that tells rooms apart, and a random ID for each message.</p>
+  <p>The App’s Bluetooth signal includes a marker identifying it as a device running this App. It does not include your nickname or room names.</p>
+  <p>Only people who have a room’s QR code can join that room. In other words, anyone who gets the QR code can join and read the messages. Please be careful not to let photos or screenshots of a QR code spread.</p>
+
+  <h2><span class="n">4</span>Permissions</h2>
+  <ul>
+    <li><strong>Bluetooth</strong>: to exchange messages with nearby devices. The App runs in the background so that messages arrive even when the screen is off or locked.</li>
+    <li><strong>Camera</strong>: only to scan a room’s QR code. No photos or video are saved or sent.</li>
+    <li><strong>Notifications</strong>: the App creates notifications on your device to tell you a new message has arrived. They only say “New message”; the message text is never shown. The App does not use push notifications from a server.</li>
+  </ul>
+  <p>The App does not use location, contacts, photos or the microphone. You can turn these permissions off at any time in the iPhone Settings app.</p>
+
+  <h2><span class="n">5</span>Sharing with third parties</h2>
+  <p>The App contains no third-party services such as advertising, analytics or crash reporting. The developer never shares or sells your information.</p>
+  <p>If you install a test version through Apple’s TestFlight service, or install the App from the App Store, Apple may collect crash information and usage data if you allow it on your iPhone. Apple handles this under its own privacy policy; the App itself does not send it. Through Apple, the developer may see crash reports and aggregated data that do not identify you. If you send feedback through TestFlight, the developer receives its content, which may include your email address.</p>
+
+  <div class="kids">
+    <h2><span class="n">6</span>Children</h2>
+    <p>The App is designed so that children can use it with family and friends. There are two things we want parents to know.</p>
+    <ul>
+      <li>The App does not connect you with strangers automatically. You can only talk inside rooms you joined by QR code.</li>
+      <li>Anyone who gets a room’s QR code can join that room. Please decide together with your child whom to share a QR code with.</li>
+    </ul>
+    <p>The App does not collect age or similar information.</p>
+  </div>
+
+  <h2><span class="n">7</span>Deleting your information</h2>
+  <p>When you leave a room, that room’s messages are removed from your device. Messages already delivered to other members, including your leave notice, stay on their devices. If you rejoin the same room, recent messages may be sent to you again from other members’ devices.</p>
+  <p>Deleting the App removes information stored on your device, such as messages and your nickname. Room keys are kept in the iPhone Keychain, so they remain after the App is deleted, but they are erased automatically when the App is installed again. Room keys are never moved to iCloud or to another device. Because the developer keeps no information, no deletion request to the developer is needed.</p>
+
+  <h2><span class="n">8</span>Changes to this policy</h2>
+  <p>We may update this policy as features change. Any update will be posted on this page with a new date.</p>
+
+  <h2><span class="n">9</span>Contact</h2>
+  <p>If you have questions about this policy, please contact:</p>
+  <p><span class="contact">ohayou1572@gmail.com</span></p>
+
+  <footer>Tico Star developer · Effective October 27, 2026</footer>
+</section>
+
+<!-- ===================== 简体中文 ===================== -->
+<section class="wrap" id="sec-zh" lang="zh-Hans" hidden>
+  <div class="summary">
+    <h2>简要说明</h2>
+    <ul>
+      <li>本应用不会连接互联网或任何服务器。</li>
+      <li>无需注册账号。本应用不会向开发者发送您的信息。</li>
+      <li>消息使用每个房间各自的密钥加密,通过蓝牙发送到附近的设备,只保存在您的 iPhone(或 iPad)中。</li>
+      <li>没有广告、使用情况分析或跟踪。</li>
+    </ul>
+  </div>
+
+  <p>“Tico Star”(以下简称“本应用”)是一款在没有手机信号和 Wi-Fi 的地方,与附近同伴互发文字消息的应用。本政策说明本应用处理哪些信息,以及如何保护这些信息。</p>
+
+  <h2><span class="n">1</span>我们收集的信息</h2>
+  <p>开发者不收集任何个人信息。本应用没有账号,也没有开发者运营的服务器。本应用不会向开发者发送您的信息(通过 Apple 送达开发者的信息请参阅第 5 条)。</p>
+
+  <h2><span class="n">2</span>在您设备上处理的信息</h2>
+  <p>为实现应用功能,本应用会在您的设备上处理以下信息。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>信息</th><th>用途</th><th>保存位置 / 共享对象</th></tr></thead>
+    <tbody>
+      <tr><td>消息</td><td>显示聊天内容,重发未送达的消息</td><td>您的设备(每个房间最新 1000 条)</td></tr>
+      <tr><td>昵称(最多 16 个字符,无需使用真实姓名)</td><td>显示发言者,以及显示当前在房间内的成员列表</td><td>您的设备。加密后仅发送给同一房间的成员</td></tr>
+      <tr><td>房间名称和房间密钥(通过二维码获取)</td><td>仅限房间成员之间交流</td><td>您的设备(房间密钥保存在 iPhone 钥匙串中)</td></tr>
+      <tr><td>设备识别号(首次启动时应用生成的随机值)</td><td>区分聊天气泡颜色、统计连接人数。与您本人无关,重新安装应用后会改变</td><td>您的设备。加密后仅发送给同一房间的成员</td></tr>
+      <tr><td>连接信息(哪些设备彼此相连,包括各设备的昵称)</td><td>显示应用中的背景示意图和当前在房间内的成员列表</td><td>加密后仅在同一房间的成员之间共享</td></tr>
+      <tr><td>加入、退出房间的通知(例如“某某加入了房间”,使用昵称)</td><td>让成员知道谁加入或退出了房间(有助于发现陌生人加入)</td><td>加密后仅发送给同一房间的成员,并保留在成员的聊天记录中</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2><span class="n">3</span>消息的传递方式与加密</h2>
+  <p>消息通过蓝牙直接发送到附近的设备。每条消息都使用所在房间的密钥加密(AES-256-GCM)。密钥在创建房间时由应用生成,只包含在该房间的二维码中,不会在通信中传输。如果消息在传递途中被篡改,接收设备会检测到并将其丢弃。</p>
+  <p>为了送达较远的成员,处于“中继模式”的设备可能会将其他房间的消息以加密状态转交给下一台设备。中继设备没有房间密钥,因此无法读取消息内容。但中继设备可以看到通信发生的时间和数据大小、用于区分房间的简短标识,以及每条消息的随机 ID。</p>
+  <p>本应用的蓝牙信号中包含表明“这是运行本应用的设备”的标识,但不包含昵称或房间名称。</p>
+  <p>只有持有房间二维码的人才能加入该房间。换句话说,任何获得二维码的人都可以加入房间并读取消息。请注意不要让二维码的照片或截图扩散。</p>
+
+  <h2><span class="n">4</span>使用的权限</h2>
+  <ul>
+    <li><strong>蓝牙</strong>:用于与附近设备互发消息。为了在屏幕关闭或锁屏时也能接收消息,本应用会在后台运行。</li>
+    <li><strong>相机</strong>:仅在扫描房间二维码时使用,不保存也不发送照片或视频。</li>
+    <li><strong>通知</strong>:本应用在设备上生成通知,提示有新消息。通知只显示“有新消息”,不会显示消息正文。本应用不使用来自服务器的推送通知。</li>
+  </ul>
+  <p>本应用不使用位置信息、通讯录、照片或麦克风。您可以随时在 iPhone 的“设置”应用中关闭这些权限。</p>
+
+  <h2><span class="n">5</span>向第三方提供信息</h2>
+  <p>本应用未集成广告、访问分析、崩溃报告等任何第三方服务。开发者不会向第三方提供或出售您的信息。</p>
+  <p>如果您通过 Apple 的测试分发服务“TestFlight”安装测试版,或从 App Store 安装本应用,并在 iPhone 上允许共享,Apple 可能会收集崩溃信息和使用情况。这些信息由 Apple 按照其隐私政策处理,并非由本应用发送。开发者可能会通过 Apple 看到无法识别个人身份的崩溃记录和统计信息。如果您通过 TestFlight 发送反馈,开发者会收到反馈内容(可能包含发送者的电子邮件地址)。</p>
+
+  <div class="kids">
+    <h2><span class="n">6</span>关于儿童使用</h2>
+    <p>本应用在设计时考虑到了儿童与家人、朋友一起使用的情形。请家长了解以下两点。</p>
+    <ul>
+      <li>本应用不会自动与陌生人建立连接。只能在通过二维码加入的房间内交流。</li>
+      <li>任何获得房间二维码的人都可以加入该房间。请与孩子一起决定与谁分享二维码。</li>
+    </ul>
+    <p>本应用不收集年龄等信息。</p>
+  </div>
+
+  <h2><span class="n">7</span>删除信息</h2>
+  <p>退出房间后,该房间的消息会从您的设备中删除。但已送达其他成员的消息(包括退出通知)会保留在他们的设备上。重新加入同一房间时,其他成员设备上的近期消息可能会再次发送给您。</p>
+  <p>删除本应用后,设备中保存的消息、昵称等信息将被清除。房间密钥保存在 iPhone 钥匙串中,因此删除应用时仍会保留,但在重新安装应用时会自动清除。房间密钥不会转移到 iCloud 或其他设备。由于开发者不保留任何信息,因此无需向开发者申请删除。</p>
+
+  <h2><span class="n">8</span>本政策的变更</h2>
+  <p>本政策可能会随着功能的增加而变更。如有变更,我们将在本页面更新内容和日期。</p>
+
+  <h2><span class="n">9</span>联系方式</h2>
+  <p>如对本政策有任何疑问,请通过以下方式联系我们:</p>
+  <p><span class="contact">ohayou1572@gmail.com</span></p>
+
+  <footer>Tico Star 开发者 · 制定日期 2026年10月27日</footer>
+</section>
+
+<!-- ===================== 繁體中文 ===================== -->
+<section class="wrap" id="sec-tw" lang="zh-Hant" hidden>
+  <div class="summary">
+    <h2>簡要說明</h2>
+    <ul>
+      <li>本 App 不會連線至網際網路或任何伺服器。</li>
+      <li>無需註冊帳號。本 App 不會將您的資訊傳送給開發者。</li>
+      <li>訊息會使用每個房間各自的金鑰加密,透過藍牙傳送到附近的裝置,只儲存在您的 iPhone(或 iPad)中。</li>
+      <li>沒有廣告、使用情形分析或追蹤。</li>
+    </ul>
+  </div>
+
+  <p>「Tico Star」(以下簡稱「本 App」)是一款在沒有手機訊號和 Wi-Fi 的地方,與附近同伴互傳文字訊息的 App。本政策說明本 App 處理哪些資訊,以及如何保護這些資訊。</p>
+
+  <h2><span class="n">1</span>我們蒐集的資訊</h2>
+  <p>開發者不蒐集任何個人資訊。本 App 沒有帳號,也沒有開發者營運的伺服器。本 App 不會將您的資訊傳送給開發者(透過 Apple 送達開發者的資訊請參閱第 5 條)。</p>
+
+  <h2><span class="n">2</span>在您裝置上處理的資訊</h2>
+  <p>為了提供 App 的功能,本 App 會在您的裝置上處理以下資訊。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>資訊</th><th>用途</th><th>儲存位置/分享對象</th></tr></thead>
+    <tbody>
+      <tr><td>訊息</td><td>顯示聊天內容,重新傳送未送達的訊息</td><td>您的裝置(每個房間最新 1000 則)</td></tr>
+      <tr><td>暱稱(最多 16 個字元,不必使用真實姓名)</td><td>顯示發言者,以及顯示目前在房間內的成員清單</td><td>您的裝置。加密後僅傳送給同一房間的成員</td></tr>
+      <tr><td>房間名稱與房間金鑰(透過 QR Code 取得)</td><td>僅限房間成員之間交流</td><td>您的裝置(房間金鑰儲存在 iPhone 鑰匙圈中)</td></tr>
+      <tr><td>裝置識別碼(首次啟動時 App 產生的隨機值)</td><td>區分聊天泡泡顏色、計算連線人數。與您本人無關,重新安裝 App 後會改變</td><td>您的裝置。加密後僅傳送給同一房間的成員</td></tr>
+      <tr><td>連線資訊(哪些裝置彼此相連,包括各裝置的暱稱)</td><td>顯示 App 中的背景示意圖和目前在房間內的成員清單</td><td>加密後僅在同一房間的成員之間分享</td></tr>
+      <tr><td>加入、離開房間的通知(例如「某某加入了房間」,使用暱稱)</td><td>讓成員知道誰加入或離開了房間(有助於發現陌生人加入)</td><td>加密後僅傳送給同一房間的成員,並保留在成員的聊天紀錄中</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2><span class="n">3</span>訊息的傳遞方式與加密</h2>
+  <p>訊息透過藍牙直接傳送到附近的裝置。每則訊息都會使用所在房間的金鑰加密(AES-256-GCM)。金鑰在建立房間時由 App 產生,只包含在該房間的 QR Code 中,不會在通訊中傳輸。如果訊息在傳遞途中遭到竄改,接收裝置會偵測到並將其丟棄。</p>
+  <p>為了送達較遠的成員,處於「中繼模式」的裝置可能會將其他房間的訊息以加密狀態轉交給下一台裝置。中繼裝置沒有房間金鑰,因此無法讀取訊息內容。但中繼裝置可以看到通訊發生的時間與資料大小、用於區分房間的簡短標識,以及每則訊息的隨機 ID。</p>
+  <p>本 App 的藍牙訊號中包含表示「這是執行本 App 的裝置」的標識,但不包含暱稱或房間名稱。</p>
+  <p>只有持有房間 QR Code 的人才能加入該房間。換句話說,任何取得 QR Code 的人都可以加入房間並讀取訊息。請注意不要讓 QR Code 的照片或截圖擴散。</p>
+
+  <h2><span class="n">4</span>使用的權限</h2>
+  <ul>
+    <li><strong>藍牙</strong>:用於與附近裝置互傳訊息。為了在螢幕關閉或鎖定時也能接收訊息,本 App 會在背景執行。</li>
+    <li><strong>相機</strong>:僅在掃描房間 QR Code 時使用,不儲存也不傳送照片或影片。</li>
+    <li><strong>通知</strong>:本 App 在裝置上產生通知,提示有新訊息。通知只顯示「有新訊息」,不會顯示訊息內容。本 App 不使用來自伺服器的推播通知。</li>
+  </ul>
+  <p>本 App 不使用定位、聯絡人、照片或麥克風。您可以隨時在 iPhone 的「設定」App 中關閉這些權限。</p>
+
+  <h2><span class="n">5</span>向第三方提供資訊</h2>
+  <p>本 App 未整合廣告、存取分析、當機報告等任何第三方服務。開發者不會向第三方提供或出售您的資訊。</p>
+  <p>如果您透過 Apple 的測試發佈服務「TestFlight」安裝測試版,或從 App Store 安裝本 App,並在 iPhone 上允許分享,Apple 可能會蒐集當機資訊和使用情形。這些資訊由 Apple 依照其隱私權政策處理,並非由本 App 傳送。開發者可能會透過 Apple 看到無法識別個人身分的當機紀錄和統計資訊。如果您透過 TestFlight 傳送意見回饋,開發者會收到回饋內容(可能包含傳送者的電子郵件地址)。</p>
+
+  <div class="kids">
+    <h2><span class="n">6</span>關於兒童使用</h2>
+    <p>本 App 在設計時考慮到了兒童與家人、朋友一起使用的情形。請家長了解以下兩點。</p>
+    <ul>
+      <li>本 App 不會自動與陌生人建立連線。只能在透過 QR Code 加入的房間內交流。</li>
+      <li>任何取得房間 QR Code 的人都可以加入該房間。請與孩子一起決定要和誰分享 QR Code。</li>
+    </ul>
+    <p>本 App 不蒐集年齡等資訊。</p>
+  </div>
+
+  <h2><span class="n">7</span>刪除資訊</h2>
+  <p>離開房間後,該房間的訊息會從您的裝置中刪除。但已送達其他成員的訊息(包括離開通知)會保留在他們的裝置上。重新加入同一房間時,其他成員裝置上的近期訊息可能會再次傳送給您。</p>
+  <p>刪除本 App 後,裝置中儲存的訊息、暱稱等資訊將被清除。房間金鑰儲存在 iPhone 鑰匙圈中,因此刪除 App 時仍會保留,但在重新安裝 App 時會自動清除。房間金鑰不會轉移到 iCloud 或其他裝置。由於開發者不保留任何資訊,因此無需向開發者申請刪除。</p>
+
+  <h2><span class="n">8</span>本政策的變更</h2>
+  <p>本政策可能會隨著功能的增加而變更。如有變更,我們將在本頁面更新內容與日期。</p>
+
+  <h2><span class="n">9</span>聯絡方式</h2>
+  <p>如對本政策有任何疑問,請透過以下方式聯絡我們:</p>
+  <p><span class="contact">ohayou1572@gmail.com</span></p>
+
+  <footer>Tico Star 開發者 · 制定日期 2026年10月27日</footer>
+</section>
+</main>
+
+<script>
+(function(){
+  var meta={
+    ja:{name:"ティコの星",h1:"プライバシーポリシー",date:"制定日:2026年10月27日",lang:"ja"},
+    en:{name:"Tico Star",h1:"Privacy Policy",date:"Effective: October 27, 2026",lang:"en"},
+    zh:{name:"Tico Star",h1:"隐私政策",date:"制定日期:2026年10月27日",lang:"zh-Hans"},
+    tw:{name:"Tico Star",h1:"隱私權政策",date:"制定日期:2026年10月27日",lang:"zh-Hant"}
+  };
+  function show(){
+    var l=(location.hash||"").slice(1);
+    if(!meta[l]){
+      var nl=(navigator.language||"ja").toLowerCase();
+      l=/^zh-(hant|tw|hk|mo)/.test(nl)?"tw":nl.indexOf("zh")===0?"zh":nl.indexOf("en")===0?"en":"ja";
+    }
+    ["ja","en","zh","tw"].forEach(function(k){
+      document.getElementById("sec-"+k).hidden=(k!==l);
+      document.querySelector('nav a[data-l="'+k+'"]').setAttribute("aria-current",k===l?"true":"false");
+    });
+    var m=meta[l];
+    document.getElementById("appname").textContent=m.name;
+    document.getElementById("h1").textContent=m.h1;
+    document.getElementById("date").textContent=m.date;
+    document.querySelector("header").lang=m.lang;
+    document.title=m.name+" "+m.h1;
+  }
+  window.addEventListener("hashchange",show);
+  show();
+
+  // quiet starfield
+  var c=document.getElementById("stars"),x=c.getContext("2d");
+  function draw(){
+    var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;
+    c.width=r.width*d;c.height=r.height*d;x.scale(d,d);
+    var n=Math.round(r.width*r.height/1800),seed=7;
+    function rnd(){seed=(seed*9301+49297)%233280;return seed/233280}
+    for(var i=0;i<n;i++){
+      var px=rnd()*r.width,py=rnd()*r.height,s=rnd();
+      x.fillStyle="rgba(238,241,255,"+(0.15+s*0.5)+")";
+      x.beginPath();x.arc(px,py,s<0.9?0.8:1.6,0,Math.PI*2);x.fill();
+    }
+  }
+  draw();window.addEventListener("resize",function(){x.setTransform(1,0,0,1,0,0);draw()});
+})();
+</script>
+
+</body>
+</html>
