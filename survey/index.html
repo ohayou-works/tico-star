@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ティコの星 アンケート</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #0b0f1a;
+    --card: #141a2b;
+    --text: #eef1f7;
+    --sub: #a9b1c6;
+    --accent: #f5c84c;
+    --line: #262f47;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 40px 20px 56px; }
+  .star { font-size: 40px; color: var(--accent); text-align: center; margin: 0; }
+  h1 { font-size: 24px; text-align: center; margin: 8px 0 28px; line-height: 1.5; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .card h2 { font-size: 18px; margin: 0 0 8px; }
+  .card p { margin: 0; }
+  ol { margin: 0; padding-left: 1.4em; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+  .button {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: #1a1406;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 24px 0 20px;
+    font-size: 18px;
+  }
+  .note { color: var(--sub); font-size: 14px; }
+  .note p { margin: 0 0 6px; }
+  footer { color: var(--sub); font-size: 13px; text-align: center; margin-top: 40px; }
+  footer a { color: var(--sub); }
+
+  /* いまの状態だけを表示する(body の data-state で切り替え) */
+  .state { display: none; }
+  body[data-state="prep"]   .state-prep,
+  body[data-state="open"]   .state-open,
+  body[data-state="closed"] .state-closed { display: block; }
+</style>
+</head>
+
+<!--
+  ▼ 切り替えるのは、すぐ下の data-state の1か所だけです。
+    prep   … 準備中(アンケートはまだ)
+    open   … 配布中(アンケートのボタンを表示)
+    closed … 終了しました
+  ▼ open にする前に、下の FORM_URL を Google フォームの「回答者へのリンク」に差し替えてください。
+-->
+<body data-state="prep">
+<main>
+  <p class="star">★</p>
+  <h1>ティコの星<br>アンケートに答えて、有料版をもらおう</h1>
+
+  <!-- 準備中 -->
+  <section class="state state-prep">
+    <div class="card">
+      <h2>ただいま準備中です</h2>
+      <p>アンケートと有料版のプレゼントは、もうすぐ始まります。始まったら、このページでお知らせします。それまで、無料版で仲間と試してみてください。</p>
+    </div>
+  </section>
+
+  <!-- 配布中 -->
+  <section class="state state-open">
+    <div class="card">
+      <h2>受け取りかた</h2>
+      <ol>
+        <li>2台以上のiPhoneやiPadで、ティコの星を試してください。</li>
+        <li>下のボタンから、アンケート(6問、1分ほど)に答えてください。</li>
+        <li>送信後の画面のリンクをタップすると、有料版を無料で受け取れます。</li>
+      </ol>
+    </div>
+
+    <a class="button" href="FORM_URL">アンケートに答える</a>
+
+    <div class="card">
+      <h2>仲間との部屋を作る人へ</h2>
+      <p>有料版で作った部屋には、4人以上で入れます。仲間は無料版のままで入れます。</p>
+    </div>
+
+    <div class="note">
+      <p>・アンケートは匿名です。メールアドレスは集めません。</p>
+      <p>・コードは送信後の画面に一度だけ出ます。スクリーンショットをおすすめします。</p>
+      <p>・配布は予告なく終了することがあります。</p>
+    </div>
+  </section>
+
+  <!-- 終了 -->
+  <section class="state state-closed">
+    <div class="card">
+      <h2>配布は終了しました</h2>
+      <p>たくさんのご回答、ありがとうございました。有料版は、アプリの中から購入できます。</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="../">プライバシーポリシー</a></p>
+    <p>お問い合わせ:ohayou1572@gmail.com</p>
+  </footer>
+</main>
+</body>
+</html>
