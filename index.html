@@ -66,7 +66,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <div class="wrap">
     <div class="app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.6 7.2 7.4.3-5.8 4.6 2 7.3L12 16.7 5.8 20.9l2-7.3L2 9l7.4-.3z"/></svg><span id="appname">ティコの星</span></div>
     <h1 id="h1">プライバシーポリシー</h1>
-    <div class="date" id="date">制定日:2026年10月27日 ・ 改定日:2026年11月12日</div>
+    <div class="date" id="date">制定日:2026年10月27日 ・ 改定日:2026年11月14日</div>
     <nav aria-label="Language">
       <a href="#ja" data-l="ja">日本語</a>
       <a href="#en" data-l="en">English</a>
@@ -111,12 +111,12 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
       <tr><td>画面や動作の設定と記録(背景や文字の色、通知のオン・オフ、中継モードとその同意、既読の位置、お試しの使用回数、案内を表示したかどうか、有料版の購入状態)</td><td>あなたの端末の見た目と動きを、好みに合わせるため</td><td>あなたの端末の中だけ。送りません</td></tr>
     </tbody>
   </table></div>
-  <p>端末の中のメッセージは、iPhoneやiPadのファイル保護で守られます。iCloudやパソコンへのバックアップを使っている場合、これらの情報は、ほかのアプリのデータと同じようにバックアップに含まれることがあります(部屋の鍵は含まれません)。バックアップの内容が開発者に届くことはありません。</p>
+  <p>端末の中のメッセージは、iPhoneやiPadのファイル保護で守られます。iCloudやパソコンへのバックアップを使っている場合、これらの情報は、ほかのアプリのデータと同じようにバックアップに含まれることがあります。部屋の鍵は、バックアップを通じてほかの端末へ移ることはありません。バックアップの内容が開発者に届くことはありません。</p>
   <p>このほか、画面の表示に必要な情報も、暗号化して同じ部屋のメンバーに送ります。</p>
 
   <h2><span class="n">3</span>メッセージの届き方と暗号化</h2>
-  <p>メッセージは、Bluetoothを使って近くの端末へ直接送られます。メッセージは部屋ごとの鍵で暗号化されます(AES-256-GCM方式)。鍵は部屋を作るときにアプリが作り、その部屋のQRコードにだけ含まれます。通信の中に鍵が流れることはありません。途中で書き換えられたメッセージは、受け取った端末が検出して捨てます。</p>
-  <p>本アプリの端末は、近くにある本アプリの端末を見つけると、相手が誰かにかかわらず、自動でBluetooth接続します。これはメッセージを受け渡す通り道を作るためのもので、部屋の外の人と会話ができるようになるわけではありません。同じ部屋のメンバーでない端末は、メッセージの内容、ニックネーム、端末の識別番号を読めません。ただし、中継モードのオン・オフにかかわらず、接続した端末からは、通信が行われた時刻とデータの大きさ、部屋ごとに決まった短い印、メッセージごとのランダムなIDが見えることがあります。</p>
+  <p>メッセージは、Bluetoothを使って近くの端末へ直接送られます。メッセージは部屋ごとの鍵で暗号化されます(AES-256-GCM方式)。鍵は部屋を作るときにアプリが作り、その部屋のQRコードにだけ含まれます。通信の中に鍵が流れることはありません。メッセージの内容が書き換えられた場合は、受け取った端末が検出して捨てます。</p>
+  <p>本アプリの端末は、近くにある本アプリの端末を見つけると、相手が誰かにかかわらず、自動でBluetooth接続します。これはメッセージを受け渡す通り道を作るためのもので、部屋の外の人と会話ができるようになるわけではありません。同じ部屋のメンバーでない端末は、メッセージの内容、ニックネーム、端末の識別番号を読めません。ただし、中継モードのオン・オフにかかわらず、接続した端末からは、通信が行われた時刻とデータの大きさ、通信の種類、残りの中継回数、部屋ごとに決まった短い印、メッセージごとのランダムなIDが見えることがあります。</p>
   <p>遠くのメンバーへ届けるため、「中継モード」がオンの端末は、自分の部屋のメッセージを暗号化したまま部屋の外の端末にも渡し、ほかの部屋のメッセージも暗号化されたまま次の端末へ渡します。中継する端末は部屋の鍵を持っていないため、内容を読むことはできません。運んだメッセージを保存することもありません(同じものを二度運ばないための短い記録を、メモリの中で一時的に使うだけです)。</p>
   <p>無料版では、使い始めるときに説明の画面が出ます。同意すると中継モードは常にオンになり、オフにはできません。有料版では、設定でオン・オフを選べます。オフにすると、ほかの部屋のメッセージは運ばず、同じ部屋のメンバーとだけやりとりします。</p>
   <p>Bluetoothの電波には、「このアプリの端末」であることを示す目印が含まれます。ニックネームや部屋の名前は含まれません。</p>
@@ -133,7 +133,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <h2><span class="n">5</span>第三者への提供</h2>
   <p>本アプリには、広告、アクセス解析、クラッシュレポートなど、外部の会社のサービスは組み込まれていません。開発者が利用者の情報を第三者に提供・販売することはありません。</p>
   <p><strong>有料版の購入</strong>:購入、購入の復元、オファーコードの引き換えの手続きは、AppleがApp Storeで行います。開発者は、購入した人の名前、メールアドレス、支払いの情報を受け取りません。開発者に届くのは、売れた数などの集計だけです。購入済みかどうかは、Appleの仕組みを使って端末の中で確かめます。</p>
-  <p><strong>お知らせとアンケート</strong>:アプリ内のリンクを押すと、ブラウザで開発者のお知らせページ(GitHub Pages)が開きます。アンケートを実施しているときは、そこからGoogleフォームのアンケートに進めます。リンクを押さない限り、アプリが外部に接続することはありません。アンケートは任意かつ匿名で、メールアドレスは集めません。回答はアプリの改善のためだけに使います。これらのページはGitHubとGoogleが運営しており、それぞれのプライバシーポリシーが適用されます。</p>
+  <p><strong>お知らせとアンケート</strong>:アプリ内のリンクを押すと、ブラウザで開発者のお知らせページ(GitHub Pages)が開きます。アンケートを実施しているときは、そこからGoogleフォームのアンケートに進めます。リンクを押さない限り、これらのページに接続することはありません。アンケートは任意かつ匿名で、メールアドレスは集めません。回答はアプリの改善のためだけに使います。これらのページはGitHubとGoogleが運営しており、それぞれのプライバシーポリシーが適用されます。</p>
   <p>なお、次の情報はAppleが集め、Appleを通じて開発者に届くことがあります。これらはAppleのプライバシーポリシーに従って扱われるもので、本アプリが送っているものではありません。開発者は、これらの情報を不具合の修正とアプリの改善のためだけに使います。</p>
   <ul>
     <li><strong>TestFlightのテスト版</strong>:クラッシュ情報と、アプリの使い方の統計が、テスターのメールアドレスと結びついた形で開発者に届きます。TestFlightからフィードバックを送った場合は、その内容も開発者に届きます。</li>
@@ -155,7 +155,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>部屋から退室すると、その部屋のメッセージ、ピン留め、部屋の名前、部屋の鍵が、あなたの端末から消えます。ただし、仲間の端末に届いたメッセージ(退室のお知らせを含みます)は、仲間の端末に残ります。送ったメッセージを、相手の端末から取り消す機能はありません。</p>
   <p>部屋に入ると、初めての場合も入り直した場合も、仲間の端末にある入室前のやりとりが、最新250件まで届くことがあります。</p>
   <p>メッセージは、退室するかアプリを削除するまで、各部屋の最新1000件が保存されます。期限で自動的に消えることはありません。</p>
-  <p>本アプリを削除すると、メッセージやニックネームなど、端末内の情報は消えます。部屋の鍵はiPhoneのキーチェーン(安全な保管庫)に保管しているため、削除した時点では残りますが、アプリを入れ直したときに自動で消去されます。部屋の鍵がiCloudや別の端末に移ることはありません。バックアップに残った情報は、iPhoneやiCloud、パソコンのバックアップの設定で管理してください。開発者のもとには情報が残らないため、開発者側での削除手続きは必要ありません。</p>
+  <p>本アプリを削除すると、メッセージやニックネームなど、端末内の情報は消えます。部屋の鍵はiPhoneのキーチェーン(安全な保管庫)に保管しているため、削除した時点では残りますが、アプリを入れ直したときに自動で消去されます。部屋の鍵は、iCloudキーチェーンでは同期されません。バックアップには、その端末でしか使えない暗号化された形で含まれることがありますが、別の端末にバックアップを戻しても、部屋の鍵は使えません。バックアップに残った情報は、iPhoneやiCloud、パソコンのバックアップの設定で管理してください。開発者のもとには情報が残らないため、開発者側での削除手続きは必要ありません。</p>
 
   <h2><span class="n">8</span>このポリシーの変更</h2>
   <p>機能の追加などに合わせて、本ポリシーを変更することがあります。変更した場合は、このページで内容と日付を更新してお知らせします。</p>
@@ -164,7 +164,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>本ポリシーに関するご質問は、次の連絡先までお寄せください。</p>
   <p><span class="contact">ohayou1572@gmail.com</span></p>
 
-  <footer>ティコの星 開発者 ・ 制定日 2026年10月27日 ・ 改定日 2026年11月12日</footer>
+  <footer>ティコの星 開発者 ・ 制定日 2026年10月27日 ・ 改定日 2026年11月14日</footer>
 </section>
 
 <!-- ===================== English ===================== -->
@@ -201,12 +201,12 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
       <tr><td>Display and behavior settings and records (background and text colors, notifications on/off, Relay mode and your consent to it, read position, number of trial uses, whether guides have been shown, full-version purchase status)</td><td>Adjusting how the App looks and behaves on your device</td><td>Your device only. Never sent</td></tr>
     </tbody>
   </table></div>
-  <p>Messages on your device are protected by iPhone and iPad file protection. If you use iCloud or computer backups, this information may be included in your backups like other apps’ data (room keys are not included). Backup contents never reach the developer.</p>
+  <p>Messages on your device are protected by iPhone and iPad file protection. If you use iCloud or computer backups, this information may be included in your backups like other apps’ data. Room keys are not carried over to another device through a backup. Backup contents never reach the developer.</p>
   <p>Information needed to display the chat screen is also sent, encrypted, to members of the same room.</p>
 
   <h2><span class="n">3</span>How messages are delivered and encrypted</h2>
-  <p>Messages are sent directly to nearby devices using Bluetooth. Each message is encrypted with a key for its room (AES-256-GCM). The App creates the key when a room is made, and the key is contained only in that room’s QR code. The key is never sent over the air. If a message is altered on the way, the receiving device detects it and discards it.</p>
-  <p>When a device running the App finds another nearby device running the App, it connects to it over Bluetooth automatically, whoever the other person is. This only creates a path for passing messages along; it does not let you talk with people outside your room. Devices that are not members of the same room cannot read message content, nicknames or device IDs. However, whether Relay mode is on or off, a connected device may see when data is sent and how large it is, a short marker fixed for each room, and a random ID for each message.</p>
+  <p>Messages are sent directly to nearby devices using Bluetooth. Each message is encrypted with a key for its room (AES-256-GCM). The App creates the key when a room is made, and the key is contained only in that room’s QR code. The key is never sent over the air. If the contents of a message are altered on the way, the receiving device detects it and discards it.</p>
+  <p>When a device running the App finds another nearby device running the App, it connects to it over Bluetooth automatically, whoever the other person is. This only creates a path for passing messages along; it does not let you talk with people outside your room. Devices that are not members of the same room cannot read message content, nicknames or device IDs. However, whether Relay mode is on or off, a connected device may see when data is sent and how large it is, what type of data it is, how many relays remain, a short marker fixed for each room, and a random ID for each message.</p>
   <p>To reach members who are farther away, a device with “Relay mode” on passes its own room’s messages, still encrypted, to devices outside the room as well, and passes other rooms’ messages along, still encrypted. A relaying device does not have the room key, so it cannot read the content. It does not store the messages it carries (it only keeps a short record in memory, temporarily, so that it does not carry the same message twice).</p>
   <p>In the free version, an explanation screen appears when you start using the App. Once you agree, Relay mode is always on and cannot be turned off. In the full version, you can turn Relay mode on or off in Settings. When it is off, your device does not carry other rooms’ messages and communicates only with members of the same room.</p>
   <p>The App’s Bluetooth signal includes a marker identifying it as a device running this App. It does not include your nickname or room names.</p>
@@ -223,7 +223,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <h2><span class="n">5</span>Sharing with third parties</h2>
   <p>The App contains no third-party services such as advertising, analytics or crash reporting. The developer never shares or sells your information.</p>
   <p><strong>Buying the full version</strong>: purchases, restoring purchases and redeeming offer codes are handled by Apple through the App Store. The developer does not receive the buyer’s name, email address or payment details; the developer only receives aggregated figures such as the number of sales. Whether you have purchased is checked on your device using Apple’s system.</p>
-  <p><strong>News and surveys</strong>: tapping the link in the App opens the developer’s news page (GitHub Pages) in your browser. When a survey is running, you can go from there to a survey on Google Forms. The App does not connect to anything outside unless you tap that link. Surveys are optional and anonymous, and no email addresses are collected. Answers are used only to improve the App. These pages are run by GitHub and Google, and their own privacy policies apply.</p>
+  <p><strong>News and surveys</strong>: tapping the link in the App opens the developer’s news page (GitHub Pages) in your browser. When a survey is running, you can go from there to a survey on Google Forms. The App does not connect to these pages unless you tap that link. Surveys are optional and anonymous, and no email addresses are collected. Answers are used only to improve the App. These pages are run by GitHub and Google, and their own privacy policies apply.</p>
   <p>The following information may be collected by Apple and passed on to the developer through Apple. Apple handles it under its own privacy policy; the App itself does not send it. The developer uses this information only to fix problems and improve the App.</p>
   <ul>
     <li><strong>TestFlight test versions</strong>: crash information and statistics about how you use the App reach the developer linked to the tester’s email address. If you send feedback through TestFlight, its content also reaches the developer.</li>
@@ -245,7 +245,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>When you leave a room, that room’s messages, pinned messages, room name and room key are removed from your device. Messages already delivered to other members, including your leave notice, stay on their devices. There is no way to delete messages you sent from other people’s devices.</p>
   <p>When you join a room, whether for the first time or again, up to the latest 250 messages sent before you joined may be sent to you from other members’ devices.</p>
   <p>Up to the latest 1,000 messages per room are kept until you leave the room or delete the App. They are not deleted automatically after a set period.</p>
-  <p>Deleting the App removes information stored on your device, such as messages and your nickname. Room keys are kept in the iPhone Keychain, so they remain after the App is deleted, but they are erased automatically when the App is installed again. Room keys are never moved to iCloud or to another device. Please manage any information left in backups through your iPhone, iCloud or computer backup settings. Because the developer keeps no information, no deletion request to the developer is needed.</p>
+  <p>Deleting the App removes information stored on your device, such as messages and your nickname. Room keys are kept in the iPhone Keychain, so they remain after the App is deleted, but they are erased automatically when the App is installed again. Room keys are not synced through iCloud Keychain. A backup may contain them only in an encrypted form that works on that same device, so restoring a backup on a different device does not bring the room keys with it. Please manage any information left in backups through your iPhone, iCloud or computer backup settings. Because the developer keeps no information, no deletion request to the developer is needed.</p>
 
   <h2><span class="n">8</span>Changes to this policy</h2>
   <p>We may update this policy as features change. Any update will be posted on this page with a new date.</p>
@@ -254,7 +254,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>If you have questions about this policy, please contact:</p>
   <p><span class="contact">ohayou1572@gmail.com</span></p>
 
-  <footer>Tico Star developer · Effective October 27, 2026 · Updated November 12, 2026</footer>
+  <footer>Tico Star developer · Effective October 27, 2026 · Updated November 14, 2026</footer>
 </section>
 
 <!-- ===================== 简体中文 ===================== -->
@@ -291,12 +291,12 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
       <tr><td>界面和行为的设置与记录(背景和文字颜色、通知开关、中继模式及其同意、已读位置、试用次数、是否已显示引导、完整版购买状态)</td><td>按照您的喜好调整应用在您设备上的外观和行为</td><td>仅保存在您的设备中,不会发送</td></tr>
     </tbody>
   </table></div>
-  <p>设备中的消息受 iPhone 和 iPad 的文件保护功能保护。如果您使用 iCloud 或电脑备份,这些信息可能会像其他应用的数据一样包含在备份中(房间密钥不包含在内)。备份内容不会发送给开发者。</p>
+  <p>设备中的消息受 iPhone 和 iPad 的文件保护功能保护。如果您使用 iCloud 或电脑备份,这些信息可能会像其他应用的数据一样包含在备份中。房间密钥不会通过备份转移到其他设备。备份内容不会发送给开发者。</p>
   <p>此外,显示界面所需的信息也会加密后发送给同一房间的成员。</p>
 
   <h2><span class="n">3</span>消息的传递方式与加密</h2>
-  <p>消息通过蓝牙直接发送到附近的设备。每条消息都使用所在房间的密钥加密(AES-256-GCM)。密钥在创建房间时由应用生成,只包含在该房间的二维码中,不会在通信中传输。如果消息在传递途中被篡改,接收设备会检测到并将其丢弃。</p>
-  <p>运行本应用的设备发现附近其他运行本应用的设备时,无论对方是谁,都会自动通过蓝牙连接。这只是为了建立传递消息的通道,并不能与房间以外的人交谈。不是同一房间成员的设备无法读取消息内容、昵称和设备识别号。但无论中继模式是否开启,已连接的设备都可能看到通信发生的时间和数据大小、每个房间固定的简短标识,以及每条消息的随机 ID。</p>
+  <p>消息通过蓝牙直接发送到附近的设备。每条消息都使用所在房间的密钥加密(AES-256-GCM)。密钥在创建房间时由应用生成,只包含在该房间的二维码中,不会在通信中传输。如果消息内容在传递途中被篡改,接收设备会检测到并将其丢弃。</p>
+  <p>运行本应用的设备发现附近其他运行本应用的设备时,无论对方是谁,都会自动通过蓝牙连接。这只是为了建立传递消息的通道,并不能与房间以外的人交谈。不是同一房间成员的设备无法读取消息内容、昵称和设备识别号。但无论中继模式是否开启,已连接的设备都可能看到通信发生的时间和数据大小、通信的类型、剩余的中继次数、每个房间固定的简短标识,以及每条消息的随机 ID。</p>
   <p>为了送达较远的成员,开启“中继模式”的设备会将自己房间的消息以加密状态也交给房间外的设备,并将其他房间的消息以加密状态转交给下一台设备。中继设备没有房间密钥,因此无法读取内容,也不会保存所转交的消息(仅在内存中临时使用简短记录,以免重复转交同一消息)。</p>
   <p>在免费版中,开始使用时会显示说明画面。同意后,中继模式将始终开启,无法关闭。在完整版中,可以在设置中开启或关闭中继模式。关闭后,不会转交其他房间的消息,只与同一房间的成员交流。</p>
   <p>本应用的蓝牙信号中包含表明“这是运行本应用的设备”的标识,但不包含昵称或房间名称。</p>
@@ -313,7 +313,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <h2><span class="n">5</span>向第三方提供信息</h2>
   <p>本应用未集成广告、访问分析、崩溃报告等任何第三方服务。开发者不会向第三方提供或出售您的信息。</p>
   <p><strong>购买完整版</strong>:购买、恢复购买以及兑换优惠代码的手续由 Apple 通过 App Store 处理。开发者不会收到购买者的姓名、电子邮件地址或支付信息,只会收到销量等汇总数据。是否已购买,会在您的设备上通过 Apple 的机制进行确认。</p>
-  <p><strong>公告与问卷</strong>:点击本应用内的链接后,会在浏览器中打开开发者的公告页面(GitHub Pages)。在开展问卷调查期间,您可以从该页面进入 Google 表单问卷。除非您点击该链接,本应用不会连接外部。问卷为自愿且匿名填写,不收集电子邮件地址,回答仅用于改进本应用。这些页面由 GitHub 和 Google 运营,适用其各自的隐私政策。</p>
+  <p><strong>公告与问卷</strong>:点击本应用内的链接后,会在浏览器中打开开发者的公告页面(GitHub Pages)。在开展问卷调查期间,您可以从该页面进入 Google 表单问卷。除非您点击该链接,本应用不会连接这些页面。问卷为自愿且匿名填写,不收集电子邮件地址,回答仅用于改进本应用。这些页面由 GitHub 和 Google 运营,适用其各自的隐私政策。</p>
   <p>以下信息可能由 Apple 收集,并通过 Apple 提供给开发者。这些信息由 Apple 按照其隐私政策处理,并非由本应用发送。开发者仅将这些信息用于修复问题和改进本应用。</p>
   <ul>
     <li><strong>TestFlight 测试版</strong>:崩溃信息和应用使用情况统计会与测试人员的电子邮件地址关联后提供给开发者。如果您通过 TestFlight 发送反馈,反馈内容也会提供给开发者。</li>
@@ -335,7 +335,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>退出房间后,该房间的消息、置顶消息、房间名称和房间密钥会从您的设备中删除。但已送达其他成员的消息(包括退出通知)会保留在他们的设备上。本应用没有从对方设备上撤回已发送消息的功能。</p>
   <p>加入房间时,无论是首次加入还是重新加入,其他成员设备上加入前的消息最多可能会发送最新 250 条给您。</p>
   <p>在您退出房间或删除应用之前,每个房间会保存最新 1000 条消息,不会按期限自动删除。</p>
-  <p>删除本应用后,设备中保存的消息、昵称等信息将被清除。房间密钥保存在 iPhone 钥匙串中,因此删除应用时仍会保留,但在重新安装应用时会自动清除。房间密钥不会转移到 iCloud 或其他设备。备份中残留的信息,请通过 iPhone、iCloud 或电脑的备份设置进行管理。由于开发者不保留任何信息,因此无需向开发者申请删除。</p>
+  <p>删除本应用后,设备中保存的消息、昵称等信息将被清除。房间密钥保存在 iPhone 钥匙串中,因此删除应用时仍会保留,但在重新安装应用时会自动清除。房间密钥不会通过 iCloud 钥匙串同步。备份中可能包含仅限该设备使用的加密形式的密钥,因此将备份恢复到其他设备时,房间密钥无法使用。备份中残留的信息,请通过 iPhone、iCloud 或电脑的备份设置进行管理。由于开发者不保留任何信息,因此无需向开发者申请删除。</p>
 
   <h2><span class="n">8</span>本政策的变更</h2>
   <p>本政策可能会随着功能的增加而变更。如有变更,我们将在本页面更新内容和日期。</p>
@@ -344,7 +344,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>如对本政策有任何疑问,请通过以下方式联系我们:</p>
   <p><span class="contact">ohayou1572@gmail.com</span></p>
 
-  <footer>Tico Star 开发者 · 制定日期 2026年10月27日 · 修订日期 2026年11月12日</footer>
+  <footer>Tico Star 开发者 · 制定日期 2026年10月27日 · 修订日期 2026年11月14日</footer>
 </section>
 
 <!-- ===================== 繁體中文 ===================== -->
@@ -381,12 +381,12 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
       <tr><td>畫面與行為的設定和紀錄(背景與文字顏色、通知開關、中繼模式及其同意、已讀位置、試用次數、是否已顯示引導、完整版購買狀態)</td><td>依照您的喜好調整 App 在您裝置上的外觀與行為</td><td>僅儲存在您的裝置中,不會傳送</td></tr>
     </tbody>
   </table></div>
-  <p>裝置中的訊息受 iPhone 和 iPad 的檔案保護功能保護。如果您使用 iCloud 或電腦備份,這些資訊可能會像其他 App 的資料一樣包含在備份中(房間金鑰不包含在內)。備份內容不會傳送給開發者。</p>
+  <p>裝置中的訊息受 iPhone 和 iPad 的檔案保護功能保護。如果您使用 iCloud 或電腦備份,這些資訊可能會像其他 App 的資料一樣包含在備份中。房間金鑰不會透過備份轉移到其他裝置。備份內容不會傳送給開發者。</p>
   <p>此外,顯示畫面所需的資訊也會加密後傳送給同一房間的成員。</p>
 
   <h2><span class="n">3</span>訊息的傳遞方式與加密</h2>
-  <p>訊息透過藍牙直接傳送到附近的裝置。每則訊息都會使用所在房間的金鑰加密(AES-256-GCM)。金鑰在建立房間時由 App 產生,只包含在該房間的 QR Code 中,不會在通訊中傳輸。如果訊息在傳遞途中遭到竄改,接收裝置會偵測到並將其丟棄。</p>
-  <p>執行本 App 的裝置發現附近其他執行本 App 的裝置時,無論對方是誰,都會自動透過藍牙連線。這只是為了建立傳遞訊息的通道,並不能與房間以外的人交談。不是同一房間成員的裝置無法讀取訊息內容、暱稱和裝置識別碼。但無論中繼模式是否開啟,已連線的裝置都可能看到通訊發生的時間與資料大小、每個房間固定的簡短標識,以及每則訊息的隨機 ID。</p>
+  <p>訊息透過藍牙直接傳送到附近的裝置。每則訊息都會使用所在房間的金鑰加密(AES-256-GCM)。金鑰在建立房間時由 App 產生,只包含在該房間的 QR Code 中,不會在通訊中傳輸。如果訊息內容在傳遞途中遭到竄改,接收裝置會偵測到並將其丟棄。</p>
+  <p>執行本 App 的裝置發現附近其他執行本 App 的裝置時,無論對方是誰,都會自動透過藍牙連線。這只是為了建立傳遞訊息的通道,並不能與房間以外的人交談。不是同一房間成員的裝置無法讀取訊息內容、暱稱和裝置識別碼。但無論中繼模式是否開啟,已連線的裝置都可能看到通訊發生的時間與資料大小、通訊的類型、剩餘的中繼次數、每個房間固定的簡短標識,以及每則訊息的隨機 ID。</p>
   <p>為了送達較遠的成員,開啟「中繼模式」的裝置會將自己房間的訊息以加密狀態也交給房間外的裝置,並將其他房間的訊息以加密狀態轉交給下一台裝置。中繼裝置沒有房間金鑰,因此無法讀取內容,也不會儲存所轉交的訊息(僅在記憶體中暫時使用簡短紀錄,以免重複轉交同一訊息)。</p>
   <p>在免費版中,開始使用時會顯示說明畫面。同意後,中繼模式將一律開啟,無法關閉。在完整版中,可以在設定中開啟或關閉中繼模式。關閉後,不會轉交其他房間的訊息,只與同一房間的成員交流。</p>
   <p>本 App 的藍牙訊號中包含表示「這是執行本 App 的裝置」的標識,但不包含暱稱或房間名稱。</p>
@@ -403,7 +403,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <h2><span class="n">5</span>向第三方提供資訊</h2>
   <p>本 App 未整合廣告、存取分析、當機報告等任何第三方服務。開發者不會向第三方提供或出售您的資訊。</p>
   <p><strong>購買完整版</strong>:購買、回復購買以及兌換優惠代碼的手續由 Apple 透過 App Store 處理。開發者不會收到購買者的姓名、電子郵件地址或付款資訊,只會收到銷售數量等彙總資料。是否已購買,會在您的裝置上透過 Apple 的機制確認。</p>
-  <p><strong>公告與問卷</strong>:點選本 App 內的連結後,會在瀏覽器中開啟開發者的公告頁面(GitHub Pages)。在進行問卷調查期間,您可以從該頁面前往 Google 表單問卷。除非您點選該連結,本 App 不會連線至外部。問卷為自願且匿名填寫,不蒐集電子郵件地址,回答僅用於改善本 App。這些頁面由 GitHub 和 Google 營運,適用其各自的隱私權政策。</p>
+  <p><strong>公告與問卷</strong>:點選本 App 內的連結後,會在瀏覽器中開啟開發者的公告頁面(GitHub Pages)。在進行問卷調查期間,您可以從該頁面前往 Google 表單問卷。除非您點選該連結,本 App 不會連線至這些頁面。問卷為自願且匿名填寫,不蒐集電子郵件地址,回答僅用於改善本 App。這些頁面由 GitHub 和 Google 營運,適用其各自的隱私權政策。</p>
   <p>以下資訊可能由 Apple 蒐集,並透過 Apple 提供給開發者。這些資訊由 Apple 依照其隱私權政策處理,並非由本 App 傳送。開發者僅將這些資訊用於修正問題和改善本 App。</p>
   <ul>
     <li><strong>TestFlight 測試版</strong>:當機資訊和 App 使用情形統計會與測試人員的電子郵件地址連結後提供給開發者。如果您透過 TestFlight 傳送意見回饋,回饋內容也會提供給開發者。</li>
@@ -425,7 +425,7 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>離開房間後,該房間的訊息、釘選訊息、房間名稱與房間金鑰會從您的裝置中刪除。但已送達其他成員的訊息(包括離開通知)會保留在他們的裝置上。本 App 沒有從對方裝置上收回已傳送訊息的功能。</p>
   <p>加入房間時,無論是首次加入還是重新加入,其他成員裝置上加入前的訊息最多可能會傳送最新 250 則給您。</p>
   <p>在您離開房間或刪除 App 之前,每個房間會保存最新 1000 則訊息,不會依期限自動刪除。</p>
-  <p>刪除本 App 後,裝置中儲存的訊息、暱稱等資訊將被清除。房間金鑰儲存在 iPhone 鑰匙圈中,因此刪除 App 時仍會保留,但在重新安裝 App 時會自動清除。房間金鑰不會轉移到 iCloud 或其他裝置。備份中殘留的資訊,請透過 iPhone、iCloud 或電腦的備份設定進行管理。由於開發者不保留任何資訊,因此無需向開發者申請刪除。</p>
+  <p>刪除本 App 後,裝置中儲存的訊息、暱稱等資訊將被清除。房間金鑰儲存在 iPhone 鑰匙圈中,因此刪除 App 時仍會保留,但在重新安裝 App 時會自動清除。房間金鑰不會透過 iCloud 鑰匙圈同步。備份中可能包含僅限該裝置使用的加密形式的金鑰,因此將備份還原到其他裝置時,房間金鑰無法使用。備份中殘留的資訊,請透過 iPhone、iCloud 或電腦的備份設定進行管理。由於開發者不保留任何資訊,因此無需向開發者申請刪除。</p>
 
   <h2><span class="n">8</span>本政策的變更</h2>
   <p>本政策可能會隨著功能的增加而變更。如有變更,我們將在本頁面更新內容與日期。</p>
@@ -434,17 +434,17 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
   <p>如對本政策有任何疑問,請透過以下方式聯絡我們:</p>
   <p><span class="contact">ohayou1572@gmail.com</span></p>
 
-  <footer>Tico Star 開發者 · 制定日期 2026年10月27日 · 修訂日期 2026年11月12日</footer>
+  <footer>Tico Star 開發者 · 制定日期 2026年10月27日 · 修訂日期 2026年11月14日</footer>
 </section>
 </main>
 
 <script>
 (function(){
   var meta={
-    ja:{name:"ティコの星",h1:"プライバシーポリシー",date:"制定日:2026年10月27日 ・ 改定日:2026年11月12日",lang:"ja"},
-    en:{name:"Tico Star",h1:"Privacy Policy",date:"Effective: October 27, 2026 · Updated: November 12, 2026",lang:"en"},
-    zh:{name:"Tico Star",h1:"隐私政策",date:"制定日期:2026年10月27日 · 修订日期:2026年11月12日",lang:"zh-Hans"},
-    tw:{name:"Tico Star",h1:"隱私權政策",date:"制定日期:2026年10月27日 · 修訂日期:2026年11月12日",lang:"zh-Hant"}
+    ja:{name:"ティコの星",h1:"プライバシーポリシー",date:"制定日:2026年10月27日 ・ 改定日:2026年11月14日",lang:"ja"},
+    en:{name:"Tico Star",h1:"Privacy Policy",date:"Effective: October 27, 2026 · Updated: November 14, 2026",lang:"en"},
+    zh:{name:"Tico Star",h1:"隐私政策",date:"制定日期:2026年10月27日 · 修订日期:2026年11月14日",lang:"zh-Hans"},
+    tw:{name:"Tico Star",h1:"隱私權政策",date:"制定日期:2026年10月27日 · 修訂日期:2026年11月14日",lang:"zh-Hant"}
   };
   function show(){
     var l=(location.hash||"").slice(1);
